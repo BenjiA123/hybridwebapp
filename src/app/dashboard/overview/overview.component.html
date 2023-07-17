@@ -1,0 +1,250 @@
+<!-- <ng-container class="overview_background"> -->
+<div class="overview">
+  <h1 class="overview_header">Overview</h1>
+
+  <div class="wallet_balance_card">
+    <div class="wallet_balance_card_content">
+      <div style="margin: auto -25px auto 15px" class="row">
+        <div class="col span-3-of-10 box">
+          <span><h4>Wallet Balance</h4></span>
+          <app-button
+            [button_type]="'blue_btn'"
+            [btn_text]="'₦ 2,000,000.'"
+          ></app-button>
+          <br />
+          <div class="row">
+            <div class="col span-5-of-8 box">
+              <app-button
+                [button_type]="'yellow_btn'"
+                [btn_text]="'Check Payout'"
+              ></app-button>
+            </div>
+            <div class="col span-3-of-8 box">
+              <app-button
+                [button_type]="'white_btn'"
+                [btn_text]="'Withdraw'"
+              ></app-button>
+            </div>
+          </div>
+        </div>
+        <div class="col span-5-of-10 box">
+          <div class="payout_account">
+            <span><h4>Payout Account</h4></span>
+            <div style="margin-left: 5%" class="row">
+              <div class="col span-7-of-10 box">
+                <ul>
+                  <li class="payout_account_name">Abc Joc</li>
+                  <li class="payout_account_account_number">
+                    <br />
+                    <h2>0785233244</h2>
+                  </li>
+                </ul>
+              </div>
+              <div class="col span-3-of-10 box">
+                <ul>
+                  <li class="payout_account_bank">Abc Bank</li>
+                  <app-button
+                    [button_type]="'blue_btn'"
+                    [btn_text]="'Edit'"
+                    [styles]="{ padding: '.5rem 2rem' }"
+                  ></app-button>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col span-2-of-10 box profile_data">
+          <div class="row">
+            <div class="col span-5-of-10 box">
+              <span><h4>Profile</h4></span>
+            </div>
+            <div class="col span-5-of-10 box">
+              <app-button
+                style="float: right; margin-top: 0.3rem"
+                [button_type]="'blue_btn'"
+                [btn_text]="'Edit'"
+              ></app-button>
+            </div>
+          </div>
+          <br />
+          <div class="row">
+            <div class="col span-3-of-10 box">
+              <img
+                src="../../../assets/user_profile/user_profile.png"
+                alt="Profile image"
+              />
+            </div>
+            <div class="col span-7-of-10 box">
+              <ul>
+                <li class="profile_data_holdings">Yangi holdings</li>
+                <li class="profile_data_name"><strong>Benji A</strong></li>
+                <li class="profile_data_location">Abuja Nigeria</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row_2">
+    <div style="padding: 1rem 1rem" class="row">
+      <div class="col span-3-of-6 box">
+        <div class="finantial_stat">
+          <div class="row">
+            <div class="col span-3-of-6 box">
+              <span><h5>Finantial Stats</h5></span>
+              <div class="money">
+                <br />
+                <p>Money In</p>
+                <br />
+                <div class="money_card">
+                  <div *ngFor="let item of finatialStat_money_In" class="row">
+                    <div class="col span-3-of-6 box">
+                      <p class="app_blue">N2 000 000</p>
+                    </div>
+                    <div class="col span-3-of-6 box">
+                      <p class="place">Palace Royal</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col span-3-of-6 box">
+              <ul>
+                <li class="active">1d</li>
+                <li>7d</li>
+                <li>Mtd</li>
+                <li>Qtd</li>
+                <li>Ytd</li>
+              </ul>
+              <!-- <br /> -->
+
+              <div class="money">
+                <br />
+                <p>Money Out</p>
+                <br />
+                <div class="money_card">
+                  <div *ngFor="let item of finatialStat_money_Out" class="row">
+                    <div class="col span-3-of-6 box">
+                      <p style="color: red !important" class="">-N2 000 000</p>
+                    </div>
+                    <div class="col span-3-of-6 box">
+                      <p class="place">Palace Royal</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col span-3-of-6 box">
+        <div class="now_selling">
+          <div class="row">
+            <div class="col span-3-of-6 box">
+              <span><h5>Now Selling</h5></span><br />
+              <p>
+                More rooms are now <br />
+                avaliable for sale in Hybrid <br />
+                Hotel
+              </p>
+              <br />
+              <app-button
+                [button_type]="'white_btn'"
+                [btn_text]="'Invest More'"
+              ></app-button>
+            </div>
+            <div class="col span-3-of-6 box">
+              <img
+                style="width: 100%"
+                src="../../../assets/now-selling/1.png"
+                alt="Now Selling Image"
+              />
+              <br />
+              <img
+                style="width: 100%"
+                src="../../../assets/now-selling/2.png"
+                alt="Now Selling Image"
+              />
+            </div>
+          </div>
+          <a href="#">Others</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row_3">
+    <div class="recent_transactions">
+      <br />
+      <div class="row">
+        <div class="col span-3-of-5 box">
+          <span><h4>Recent Transactions</h4></span>
+        </div>
+        <div class="col span-2-of-5 box" style="text-align: right">
+          This month
+          <select style="width: 1rem; border: none" name="" id="">
+            <option value="">Hello</option>
+          </select>
+        </div>
+      </div>
+      <div *ngFor="let transaction of transactions" class="transaction">
+        <div class="row">
+          <div class="col span-1-of-5 box app_blue">₦ 2,000,000.</div>
+          <div class="col span-1-of-5 box">Palace Royal</div>
+          <div class="col span-1-of-5 box">Payment</div>
+          <div class="col span-1-of-5 box">Hybrid Logistics</div>
+          <div class="col span-1-of-5 box">2/03/2022</div>
+        </div>
+        <div class="row">
+          <div class="col span-1-of-5 box app_red">₦ 2,000,000.</div>
+          <div class="col span-1-of-5 box">Palace Royal</div>
+          <div class="col span-1-of-5 box">Invested</div>
+          <div class="col span-1-of-5 box">Abc Jod - Abc Bank</div>
+          <div class="col span-1-of-5 box">2/03/2022</div>
+        </div>
+      </div>
+      <br />
+    </div>
+  </div>
+
+  <div>
+    <div style="padding: 1rem 1rem" class="row">
+      <div class="holdings">
+        <br />
+
+        <div class="row">
+          <div class="col span-3-of-5 box">
+            <span><h4>Holdings</h4></span>
+          </div>
+          <div class="col span-2-of-5 box" style="text-align: right">
+            This month
+            <select style="width: 1rem" name="" id="">
+              <option value="">Hello</option>
+            </select>
+          </div>
+        </div>
+        <div *ngFor="let holding of holdings" class="holding">
+          <div class="row">
+            <div class="col span-1-of-5 box">Palace Royal</div>
+            <div class="col span-1-of-5 box app_green">Invested</div>
+            <div class="col span-1-of-5 box">Completed</div>
+            <div class="col span-1-of-5 box">Aja, Lagos</div>
+            <div class="col span-1-of-5 box">2/03/2022</div>
+          </div>
+          <div class="row">
+            <div class="col span-1-of-5 box">Palace Royal</div>
+            <div class="col span-1-of-5 box app_blue">For Sale</div>
+            <div class="col span-1-of-5 box">Development</div>
+            <div class="col span-1-of-5 box">Sabo, Kano</div>
+            <div class="col span-1-of-5 box">2/03/2022</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row"></div>
+<!-- </ng-container> -->

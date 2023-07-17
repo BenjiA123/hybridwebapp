@@ -1,0 +1,126 @@
+<div class="wallet">
+  <h1 class="wallet_header">Wallet</h1>
+
+  <div class="wallet_details_panel">
+    <div class="row">
+      <div class="col span-3-of-10 box">
+        <br />
+        <span><h4>Wallet Balance</h4></span>
+        <br />
+        <app-button
+          [button_type]="'blue_btn'"
+          [btn_text]="'₦ 2,000,000.'"
+        ></app-button>
+        <br />
+        <div style="margin: 0; padding: 0" class="row">
+          <div class="col span-6-of-10 box">
+            <app-button
+              [button_type]="'yellow_btn'"
+              [btn_text]="'Check Payouts'"
+            ></app-button>
+          </div>
+          <div class="col span-4-of-10 box">
+            <app-button
+              (click)="withdraw()"
+              [button_type]="'white_btn'"
+              [btn_text]="'Withdraw'"
+            ></app-button>
+          </div>
+        </div>
+      </div>
+      <div class="col span-7-of-10 box">
+        <div class="wallet_finantial_stat_panel">
+          <div class="row">
+            <div class="row">
+              <div class="col span-5-of-10 box">
+                <h5 class="wallet_finantial_stat_panel_header">
+                  Financial Stats
+                </h5>
+              </div>
+              <div class="col span-5-of-10 box">
+                <ul>
+                  <li class="active">1d</li>
+                  <li>7d</li>
+                  <li>Mtd</li>
+                  <li>Qtd</li>
+                  <li>Ytd</li>
+                </ul>
+              </div>
+            </div>
+            <div class="row" style="font-size: 0.8rem">
+              <div class="col span-5-of-10 box">
+                <span><p>Money In</p></span>
+                <br />
+
+                <div class="row" style="font-size: 0.7rem">
+                  <div class="col span-5-of-10 box app_green">₦ 2,000,000.</div>
+                  <div class="col span-5-of-10 box">Palace Royal</div>
+                </div>
+              </div>
+              <div class="col span-5-of-10 box">
+                <span><p>Money Out</p></span>
+                <br />
+                <div class="row" style="font-size: 0.7rem">
+                  <div class="col span-5-of-10 box app_red">- ₦ 2,000,000.</div>
+                  <div class="col span-5-of-10 box">Palace Royal</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wallet_transactions">
+    <br />
+    <div class="wallet_transactions_header">
+      <div class="row">
+        <div class="col span-2-of-10 box"><h3>Transactions</h3></div>
+        <div class="col span-2-of-10 box"></div>
+        <div class="col span-2-of-10 box">
+          Filter List
+
+          <select style="width: 1rem; border: none" name="" id="">
+            <option value="">Hello</option>
+          </select>
+        </div>
+        <div class="col span-2-of-10 box">
+          All Time
+
+          <select style="width: 1rem; border: none" name="" id="">
+            <option value="">Hello</option>
+          </select>
+        </div>
+        <div class="col span-2-of-10 box">
+          <br />
+          <app-button
+            [button_type]="'blue_btn'"
+            [btn_text]="'Export Report'"
+          ></app-button>
+        </div>
+      </div>
+    </div>
+    <br /><br />
+
+    <div
+      *ngFor="let wallet_transaction of wallet_transactions"
+      class="wallet_transactions_transaction"
+    >
+      <div class="row">
+        <div class="col span-1-of-5 box app_green">₦ 2,000,000.</div>
+        <div class="col span-1-of-5 box">Palace Royal</div>
+        <div class="col span-1-of-5 box">Payment</div>
+        <div class="col span-1-of-5 box">Hybrid Logistics</div>
+        <div class="col span-1-of-5 box">2/03/2022</div>
+      </div>
+      <div class="row">
+        <div class="col span-1-of-5 box app_blue">₦ 2,000,000.</div>
+        <div class="col span-1-of-5 box">Palace Royal</div>
+        <div class="col span-1-of-5 box">Invested</div>
+        <div class="col span-1-of-5 box">Abc Jod - Abc Bank</div>
+        <div class="col span-1-of-5 box">2/03/2022</div>
+      </div>
+    </div>
+  </div>
+</div>

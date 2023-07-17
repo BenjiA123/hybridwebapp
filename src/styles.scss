@@ -1,0 +1,92 @@
+/* You can add global styles to this file, and also import other style files */
+
+$color-crimson: crimson;
+$color-white: #fff;
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+@import "app/sass/buttons";
+@import "app/sass/grid";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary_color: #e5e5e5;
+  --secondary_color: #041e3e;
+  --tertiary_color: #f1d28d;
+}
+html {
+  color: var(--secondary_color);
+  font-size: 20px;
+  text-align: left;
+  font-family: "Raleway", sans-serif;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+.clearfix {
+  zoom: 1;
+}
+.clearfix:after {
+  content: ".";
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+
+.app_green {
+  color: green !important;
+}
+
+.app_red {
+  color: red !important;
+}
+
+.app_blue {
+  color: blue !important;
+}
+@media screen and (max-width: 1080px) {
+  html {
+    font-size: 17.5px;
+  }
+}
+
+
+.wrapper {
+  max-width: 110px !important;
+  width: 10rem !important;
+  //   visibility: hidden;
+}
+.dialog_cancel {
+  float: right;
+  background-color: rgba(18, 79, 153, 0.65);
+  border: 3px solid rgba(18, 79, 153, 0.32);
+  color: white;
+  border-radius: 50%;
+  // padding: 0.2rem;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+body ::-webkit-scrollbar{
+  width: .25rem;
+  
+}
+
+body ::-webkit-scrollbar-track{
+background: #1e1e24;  
+}
+
+body ::-webkit-scrollbar-thumb{
+background: #6649b8;  
+}

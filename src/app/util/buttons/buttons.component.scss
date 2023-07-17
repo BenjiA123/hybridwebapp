@@ -1,0 +1,61 @@
+.btn {
+  color: #fff !important;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.65rem;
+  cursor: pointer;
+  // text-align: center;
+  border-radius: 10px;
+  border: none;
+  margin: 0.5rem 0.2rem;
+  width: fit-content;
+}
+
+
+.white_btn {
+  background-color: white;
+  color: #000 !important;
+  border: 1px solid rgba(4, 30, 62, 1);
+}
+.green_btn {
+  background-color: rgba(8, 147, 97, 1);
+  color: #fff !important;
+  border: none;
+}
+
+.red_btn {
+  background-color: rgba(215, 61, 12, 1);
+  color: #fff !important;
+  border: none;
+}
+
+.blue_btn {
+  background-color: rgba(4, 85, 158, 1);
+  color: rgba(4, 30, 62, 1);
+}
+
+.yellow_btn {
+  background-color: rgba(241, 210, 141, 1);
+  color: rgba(4, 85, 158, 1) !important;
+}
+
+
+.dark_blue_btn {
+  background-color: rgba(4, 30, 62, 1);
+  color: #fff !important;
+  border: none;
+}
+
+
+@media screen and (max-width: 1080px) {
+  .btn {
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .btn {
+    width: 90%;
+    margin: 0 5% 1rem 5%;
+    // margin-bottom: 1rem 1rem;
+  }
+}

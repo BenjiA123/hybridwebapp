@@ -1,0 +1,32 @@
+<ng-container [ngSwitch]="button_type">
+  <ng-container *ngSwitchCase="'blue_btn'">
+    <button [ngStyle]="styles" class="btn blue_btn">{{ btn_text }}</button>
+  </ng-container>
+  <ng-container *ngSwitchCase="'dark_blue_btn'">
+    <button [ngStyle]="styles" class="btn dark_blue_btn">{{ btn_text }}</button>
+  </ng-container>
+  <!-- [ngStyle]="{'property': expression}" -->
+  <ng-container *ngSwitchCase="'yellow_btn'">
+    <button type="button" [ngStyle]="styles" class="btn yellow_btn">
+      {{ btn_text }}
+    </button>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'red_btn'">
+    <button type="button" [ngStyle]="styles" class="btn red_btn">
+      {{ btn_text }}
+    </button>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'green_btn'">
+    <button type="button" [ngStyle]="styles" class="btn green_btn">
+      {{ btn_text }}
+    </button>
+  </ng-container>
+
+  <ng-container *ngSwitchDefault>
+    <button type="button" [ngStyle]="styles" class="btn white_btn">
+      {{ btn_text }}
+    </button>
+  </ng-container>
+</ng-container>

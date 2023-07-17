@@ -1,0 +1,178 @@
+<div class="settings">
+  <h1 class="settings_header">Settings</h1>
+
+  <div class="settings_details_panel">
+    <div class="row">
+      <div class="col span-3-of-10 box">
+        <div class="verify_account">
+          <div class="row">
+            <div class="row" style="margin: 1rem">
+              <div class="col span-3-of-10 box">
+                <img
+                  src="../../../assets/user_profile/user_profile.png"
+                  alt="Profile image"
+                />
+              </div>
+              <div class="col span-7-of-10 box">
+                <ul style="list-style: none; font-size: 0.75rem">
+                  <li class="app_blue" style="margin-bottom: 0.5rem">
+                    <strong>Yangi holdings</strong>
+                  </li>
+                  <li class=""><strong>Benji A</strong></li>
+                  <li class="">Abuja Nigeria</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <app-button
+              [button_type]="'red_btn'"
+              [btn_text]="'Verify Account'"
+            ></app-button>
+          </div>
+        </div>
+      </div>
+      <div class="col span-7-of-10 box">
+        <div class="profile_overview">
+          <span><p>Profile Overview</p></span>
+          <div class="row">
+            <div class="col span-5-of-10 box" style="font-size: 0.7rem">
+              <div class="row">
+                <span class="app_blue"><strong>Username:</strong></span> Yami
+                Olade
+              </div>
+              <div class="row">
+                <span class="app_blue"><strong>Name:</strong></span> Yami Olade
+              </div>
+              <div class="row">
+                <span class="app_blue"><strong>Location:</strong></span> Abuja
+                Nigeria
+              </div>
+            </div>
+            <div class="col span-5-of-10 box">
+              <div class="row">
+                <div class="col span-5-of-10 box">
+                  <img
+                    src="../../../assets/user_profile/user_profile.png"
+                    alt="User profile"
+                  />
+                </div>
+                <div class="col span-5-of-10 box">
+                  <h5>Profile Image</h5>
+                  <br />
+                  <button
+                    class="upload_image"
+                    type="button"
+                    (click)="filePicker.click()"
+                  >
+                    <img
+                      src="../../../assets/user_profile/upload.png"
+                      alt="Upload Icon"
+                    />
+                    Upload Image
+                  </button>
+                  <input class="file" #filePicker type="file" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="settings_edit_user">
+    <form class="" formGroup="changeDataForm" (ngSubmit)="submitForm()">
+      <ng-container *ngFor="let item of formInputData">
+        <label for="{{ item.id }}"
+          ><strong>{{ item.label }}:</strong></label
+        ><br />
+        <input
+          placeholder="{{ item.placeholder }}"
+          type="{{ item.type }}"
+          formControlName=" item.formControlName "
+          id="{{ item.id }}"
+          type="text"
+        /><br />
+      </ng-container>
+    </form>
+    <app-button
+      style="float: right; margin-bottom: 3rem"
+      [button_type]="'blue_btn'"
+      (click)="submitForm()"
+      [btn_text]="'Save Changes'"
+    ></app-button>
+  </div>
+
+  <div class="settings_bank_details">
+    <br />
+    <div class="row">
+      <div class="col span-5-of-10 box">
+        <span class="settings_bank_details_header">Bank Details</span>
+      </div>
+      <div class="col span-5-of-10 box">
+        <p class="settings_bank_details_warning app_red">
+          <strong>Note:</strong>
+          Once this form has been submited, changes are not permited without
+          admin authentication.
+        </p>
+      </div>
+    </div>
+    <div class="row" style="margin-bottom: 0">
+      <div class="col span-5-of-10 box">
+        <label for="bvn"><strong>Verify BVN</strong></label
+        ><br />
+        <input placeholder="1234567823" type="number" id="bvn" />
+      </div>
+      <div class="col span-5-of-10 box">
+        <label for="bvn"><strong>Verify Government Issued ID</strong></label>
+        <select class="gov_verification">
+          <option value="">NIN</option>
+          <option value="">Drivers</option>
+          <option value="">Voters</option>
+        </select>
+        <!-- <br /> -->
+        <input placeholder="1234567823" type="number" id="bvn" />
+      </div>
+    </div>
+
+    <div class="row" style="margin-bottom: 0">
+      <div class="col span-5-of-10 box">
+        <label for="withdrawalAccountNumber"
+          ><strong>Withdrawal Account Number</strong></label
+        ><br />
+        <input
+          placeholder="1234567823"
+          type="number"
+          id="withdrawalAccountNumber"
+        />
+      </div>
+      <div class="col span-5-of-10 box">
+        <label for="accountHoldersName"
+          ><strong>Account Holders Name</strong></label
+        ><br />
+        <input placeholder="Benji" type="text" id="accountHoldersName" />
+      </div>
+    </div>
+    <div class="row" style="margin-bottom: 0">
+      <div class="col span-5-of-10 box">
+        <label for="bank"><strong>Bank</strong></label
+        ><br />
+
+        <select placeholder="Access Bank" id="bank" style="width: 100%">
+          <option value="">Access Bank</option>
+          <option value="">Wema Bank</option>
+          <option value="">First Bank</option>
+        </select>
+      </div>
+      <div class="col span-5-of-10 box">
+        <app-button
+          style="float: right"
+          [button_type]="'blue_btn'"
+          [btn_text]="'Save Changes'"
+        ></app-button>
+      </div>
+    </div>
+    <br /><br />
+  </div>
+</div>

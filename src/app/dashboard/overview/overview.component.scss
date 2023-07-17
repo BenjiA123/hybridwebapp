@@ -1,0 +1,243 @@
+.overview {
+  position: absolute;
+  right: 0;
+  top: 20%;
+  width: 85%;
+  background-color: #e5e5e5;
+  border-radius: 3rem 0 0 0;
+  min-height: 100%;
+  height: auto;
+}
+
+.overview_header {
+  position: relative;
+  margin-left: 4rem;
+  margin-top: 2rem;
+  font-size: 1.25rem;
+}
+
+.wallet_balance_card {
+  width: 90%;
+  margin: 1rem 5%;
+  background-color: white;
+  border-radius: 1rem;
+  height: auto;
+  padding-bottom: 1rem;
+
+  &_content {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.wallet_balance_card span h4 {
+  font-size: 0.8rem;
+  margin: 0.8rem 0.75rem !important;
+}
+
+.row_2 {
+  margin: 0;
+  padding: 0;
+}
+.row_3 {
+  background-color: white;
+  width: 90%;
+  border-radius: 1rem;
+  margin: 0 5%;
+}
+.finantial_stat {
+  background-color: white;
+  border-radius: 1rem;
+  width: 100%;
+  padding: 1rem;
+
+  & ul {
+    margin-top: 0.35rem;
+    margin-bottom: 1rem !important;
+    & .active {
+      background-color: rgba(222, 230, 241, 1);
+      border-radius: 2px 6px;
+      padding: 0.2rem;
+    }
+  }
+  & ul li {
+    float: left;
+    font-size: 0.6rem;
+    list-style: none;
+    margin-right: 0.9rem;
+  }
+}
+.now_selling {
+  background-color: rgba(222, 230, 241, 1);
+  border-radius: 1rem;
+  width: 100%;
+  min-height: 9rem;
+  height: auto;
+  padding: 1rem;
+  & p {
+    font-size: 0.7rem;
+    letter-spacing: 0.035rem;
+  }
+
+  // &_card
+}
+.recent_transactions {
+  width: 100%;
+  border-radius: 1rem;
+  height: auto;
+  min-height: 4rem;
+
+  background-color: white;
+  & span h4 {
+    margin: 0.5rem 2rem;
+  }
+}
+.transaction {
+  width: 90%;
+  margin: 1rem 5% !important;
+  border-radius: 10px;
+  padding: 5px;
+  min-height: 3rem;
+  font-size: 0.7rem;
+  height: auto;
+  background-color: rgba(18, 79, 153, 0.14);
+  & .row {
+    margin: 0 10%;
+    // padding: 0;
+  }
+}
+
+.holdings {
+  width: 100%;
+  border-radius: 1rem;
+  height: auto;
+  min-height: 4rem;
+  padding: 1rem 5%;
+  background-color: rgba(194, 209, 229, 1);
+}
+.holding {
+  width: 100%;
+  margin: 1rem 0 !important;
+  border-radius: 10px;
+  padding: 5px;
+  font-size: 0.7rem;
+
+  min-height: 3rem;
+  height: auto !important;
+  background-color: rgba(255, 255, 255, 0.73);
+  & span h4 {
+    margin: 0.5rem 2rem;
+  }
+  & .row {
+    margin: 0 10%;
+  }
+}
+
+.payout_account {
+  min-height: 6rem;
+  height: auto;
+  padding: 0.5rem;
+  background-color: rgba(245, 242, 242, 1);
+  border-radius: 8px;
+
+  &_name {
+    font-size: 1rem;
+    font-weight: 100;
+  }
+  &_bank {
+    font-size: 0.85rem;
+    // width: 150%;
+  }
+  & ul {
+    list-style-type: none;
+    margin-bottom: 1rem;
+    & li {
+      font-size: 0.85rem;
+      // margin-bottom: 0.5rem;
+    }
+  }
+}
+
+.profile_data {
+  background-color: rgba(222, 230, 241, 1);
+  border-radius: 10px;
+  min-height: 7rem;
+  width: 21.5%;
+  margin-right: -2rem;
+
+  & ul {
+    list-style-type: none;
+    margin-bottom: 0.5rem;
+    margin-right: 0.1rem;
+    float: right;
+    & li {
+      font-size: 0.75rem;
+      margin-bottom: 0.3rem;
+    }
+  }
+
+  & img {
+    width: 2rem;
+    border-radius: 50%;
+    margin-left: 0.75rem;
+  }
+
+  &_location {
+    font-size: 0.5rem !important;
+  }
+  &_name {
+    font-size: 0.8rem;
+  }
+  &_holdings {
+    color: blue;
+    font-size: 0.7rem !important;
+  }
+}
+
+.money {
+  &_card {
+    background-color: rgba(18, 79, 153, 0.14);
+    border-radius: 10px;
+    min-height: 9rem;
+    height: auto;
+    padding: 0.1rem;
+
+    & p {
+      font-size: 0.6rem;
+      margin: 0.65rem 0.3rem 0rem 0.3rem;
+    }
+    & .place {
+      color: black;
+    }
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .overview {
+    top: 0%;
+    border-radius:0;
+
+  }  
+}
+
+
+@media screen and (max-width: 600px) {
+  .overview {
+width: 100%;
+  }
+
+
+}
+
+@media screen and (max-width: 480px) {
+  .profile_data {
+    margin-top: 1rem;
+    width: 90%;
+    height: auto;
+    margin: 1rem 5%;
+  }
+
+  .wallet_balance_card span h4 {
+    font-size: 1.6rem;
+  }
+}

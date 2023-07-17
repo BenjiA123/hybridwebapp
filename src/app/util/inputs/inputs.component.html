@@ -1,0 +1,59 @@
+<ng-container [ngSwitch]="input_type">
+  <!-- CHECKBOX -->
+
+  <!-- 
+  <ng-container *ngFor="let item of formInputData">
+    <label for="{{ item.id }}">{{ item.label }}</label>
+    <input
+      placeholder="{{ item.placeholder }}"
+      type="{{ item.type }}"
+      formControlName=" item.formControlName "
+      id="{{ item.id }}"
+      type="text"
+    />
+  </ng-container> -->
+
+  <ng-container *ngSwitchCase="'checkbox'">
+    <input
+      type="checkbox"
+      id="{{ id }}"
+      [formControlName]="name"
+      class=""
+      placeholder="{{ placeholder }}"
+      [required]="required"
+      [readonly]="readonly"
+      (change)="change($event)"
+    />
+  </ng-container>
+  <!-- FILE -->
+  <ng-container *ngSwitchCase="'file'">
+    <!-- <input
+      type="file"
+      id="{{ id }}"
+      [class]=""
+      (change)="upload($event)"
+      [accept]="accept"
+      [attr.multiple]="multiple"
+    /> -->
+  </ng-container>
+
+  <!-- SELECT -->
+  <ng-container *ngSwitchCase="'select'">
+    <select
+      [formControlName]="name"
+      id="{{ id }}"
+      class=""
+      [required]="required"
+      (change)="change($event)"
+    >
+      <!-- <option *ngIf="showEmptyOption"></option> -->
+      <!-- <option
+        *ngFor="let item of options; trackBy: iS.trackByValue"
+        [ngValue]="item.value"
+      > -->
+      <!-- {{item|optionLabeller:optionFormatter:valueType:labelField}} -->
+      <!-- {{ item.label }} -->
+      <!-- </option> -->
+    </select>
+  </ng-container>
+</ng-container>

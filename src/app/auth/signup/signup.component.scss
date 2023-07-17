@@ -1,0 +1,15 @@
+.header {
+    background-image: linear-gradient(
+        rgba(10, 118, 216, 0.5),
+        rgba(10, 118, 216, 0.5)
+      ),
+      url(./signup.png);
+    /* height: 100vh; */
+    min-height: 100%;
+    width: 100vh;
+    height: auto;
+    margin: 0;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+  }

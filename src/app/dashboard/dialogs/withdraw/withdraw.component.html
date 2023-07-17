@@ -1,0 +1,55 @@
+<ng-container>
+  <mat-dialog-content>
+    <button
+      mat-button
+      class="close-icon"
+      [mat-dialog-close]="true"
+      class="dialog_cancel"
+    >
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-dialog-content>
+
+  <div class="row">
+    <h1>Withdraw</h1>
+    <span><p>Account Balance</p></span>
+    <app-button
+      [button_type]="'blue_btn'"
+      [btn_text]="'₦ 2, 000,000'"
+    ></app-button>
+    <p class="verify_account">
+      <a href="#">Verify Account</a>
+      <span class="app_red"> before you can withdraw</span>
+    </p>
+  </div>
+
+  <div class="row">
+    <h5>Enter Amount</h5>
+    <input type="text" placeholder="₦ 100,000 |" />
+  </div>
+  <div class="row">
+    <h5>Choose Withdrawal Account</h5>
+    <div class="col span-6-of-10 box">
+      <input
+        type="text"
+        name="amount"
+        id=""
+        placeholder="Abc Joe    1234567834"
+      />
+    </div>
+    <div class="col span-3-of-10 box">
+      <select name="bank" id="bank">
+        <option value="bank">Abc Bank</option>
+        <option value="bank">Wema Bank</option>
+        <option value="bank">Access Bank</option>
+      </select>
+    </div>
+    <h5>Password</h5>
+    <input type="password" name="password" id="" placeholder="Hybrid1234" />
+
+    <h5>Note</h5>
+    <input type="note" name="note" id="" placeholder="Thanks Hybrid" />
+
+    <app-button [button_type]="'blue_btn'" [btn_text]="'Withdraw'"></app-button>
+  </div>
+</ng-container>

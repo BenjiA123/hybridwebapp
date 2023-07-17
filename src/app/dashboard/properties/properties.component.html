@@ -1,0 +1,106 @@
+<div class="property">
+  <h1 class="property_header">Properties</h1>
+
+  <div class="property_details_panel">
+    <div class="row">
+      <div class="col span-3-of-10 box">
+        <br />
+        <span><p>Total Property Value</p></span>
+        <br />
+        <app-button
+          [button_type]="'blue_btn'"
+          [btn_text]="'₦ 2,000,000.'"
+        ></app-button>
+        <br />
+        <app-button
+          [button_type]="'yellow_btn'"
+          [btn_text]="'Check Payouts'"
+        ></app-button>
+      </div>
+      <div class="col span-7-of-10 box">
+        <div class="property_finantial_stat_panel">
+          <div class="row">
+            <div class="row">
+              <div class="col span-5-of-10 box">
+                <h5 class="property_finantial_stat_panel_header">Properties</h5>
+              </div>
+              <div class="col span-5-of-10 box">
+                <ul>
+                  <li class="active">1d</li>
+                  <li>7d</li>
+                  <li>Mtd</li>
+                  <li>Qtd</li>
+                  <li>Ytd</li>
+                </ul>
+              </div>
+            </div>
+            <div class="row" style="font-size: 0.7rem">
+              <div class="col span-5-of-10 box">
+                <span><p>Life</p></span>
+                <br />
+
+                <div class="row">
+                  <div class="col span-5-of-10 box">Palace Royal</div>
+                  <div class="col span-5-of-10 box app_green">Invested</div>
+                </div>
+
+                <div class="row">
+                  <div class="col span-5-of-10 box">Completed</div>
+                  <div class="col span-5-of-10 box">2/03/2022</div>
+                </div>
+              </div>
+              <div class="col span-5-of-10 box">
+                <span><p>20 Years</p></span>
+                <br />
+                <div class="row">
+                  <div class="col span-5-of-10 box">Palace Royal</div>
+                  <div class="col span-5-of-10 box app_red">Sold</div>
+                </div>
+
+                <div class="row">
+                  <div class="col span-5-of-10 box">Development</div>
+                  <div class="col span-5-of-10 box">2/03/2022</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="property_types">
+    <div class="property-container">
+      <div *ngFor="let property of properties" class="property_card">
+        <div class="row">
+          <div class="property_img" style="width: 100%">
+            <img
+              style="width: 100%"
+              src="../../../assets/now-selling/1.png"
+              alt="Property Image"
+            />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col span-6-of-10 box">
+            <div class="property_name">
+              <h4>Palace Royal Hotel Aja Lagos</h4>
+            </div>
+          </div>
+          <div class="col span-4-of-10 box">
+            <div class="property_status app_blue">Completed</div>
+          </div>
+        </div>
+        <div class="property_description">
+          <p>15 Story Luxury hotel project in Aja Lagos state Nigeria.</p>
+        </div>
+        <br />
+        <app-button
+          [button_type]="'blue_btn'"
+          [btn_text]="'Investment: ₦ 5, 000,000'"
+        ></app-button>
+      </div>
+    </div>
+  </div>
+</div>

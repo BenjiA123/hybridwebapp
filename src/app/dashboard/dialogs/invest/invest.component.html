@@ -1,0 +1,76 @@
+<ng-container>
+  <mat-dialog-content>
+    <button
+      mat-button
+      class="close-icon"
+      [mat-dialog-close]="true"
+      class="dialog_cancel"
+    >
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-dialog-content>
+
+  <div class="row">
+    <h1>Invest</h1>
+    <span><p>Palace Royal Aja</p></span>
+    <app-button
+      [button_type]="'green_btn'"
+      [btn_text]="'₦ 5,000,000.'"
+    ></app-button>
+    <p class="verify_account">
+      <span>20 Years Investment</span>
+    </p>
+  </div>
+
+  <div class="row">
+    <h5>Choose Rooms</h5>
+    <div class="col span-6-of-10 box">
+      <select name="bank" id="bank">
+        <option value="bank">Abc Bank</option>
+        <option value="bank">Wema Bank</option>
+        <option value="bank">Access Bank</option>
+      </select>
+    </div>
+    <div class="col span-3-of-10 box">
+      <input type="text" name="amount" id="" placeholder="₦ 10,000,000" />
+    </div>
+  </div>
+
+  <div class="row" style="margin: 0; padding: 0; width: 100%">
+    <h5>Choose Payment Method</h5>
+    <div class="col span-3-of-10 box">
+      <select name="bank" id="bank">
+        <option value="bank">Abc Bank</option>
+        <option value="bank">Wema Bank</option>
+        <option value="bank">Access Bank</option>
+      </select>
+    </div>
+    <div class="col span-4-of-10 box">
+      <app-button
+        [button_type]="'green_btn'"
+        [btn_text]="'Add Card'"
+      ></app-button>
+    </div>
+    <div class="col span-3-of-10 box" style="margin-top: -2.5rem; float: right">
+      <select name="bank" id="bank">
+        <option value="bank">Abc Bank</option>
+        <option value="bank">Wema Bank</option>
+        <option value="bank">Access Bank</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="row">
+    <h5>Password</h5>
+    <input type="password" name="password" id="" placeholder="Hybrid1234" />
+
+    <h5>Summary</h5>
+    <input
+      type="text"
+      name="summary"
+      id=""
+      placeholder="Palace Royal Aja. 2 Rooms. Total ₦10,000,000 with existing Debit card."
+    />
+    <app-button [button_type]="'green_btn'" [btn_text]="'Invest'"></app-button>
+  </div>
+</ng-container>
